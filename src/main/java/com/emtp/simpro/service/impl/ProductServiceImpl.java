@@ -3,7 +3,6 @@ package com.emtp.simpro.service.impl;
 import com.emtp.simpro.client.impl.ProductClientImpl;
 import com.emtp.simpro.model.ProductDetail;
 import com.emtp.simpro.service.IProductService;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
