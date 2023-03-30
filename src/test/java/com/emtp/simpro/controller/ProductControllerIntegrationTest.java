@@ -34,7 +34,7 @@ class ProductControllerIntegrationTest {
 
     @Test
     @DisplayName("Not Found - getProductSimilar")
-    public void getProductSimilar_NotFound() throws Exception {
+    void getProductSimilar_NotFound() throws Exception {
         client.get().uri("product/{productId}/similar", "6")
                 .exchange()
                 .expectStatus().isNotFound().expectBody()
@@ -43,7 +43,7 @@ class ProductControllerIntegrationTest {
 
     @Test
     @DisplayName("Server Error - getProductSimilar")
-    public void getProductSimilar_ServerError() throws Exception {
+    void getProductSimilar_ServerError() throws Exception {
         client.get().uri("product/{productId}/similar", "5")
                 .exchange()
                 .expectStatus().is5xxServerError().expectBody()

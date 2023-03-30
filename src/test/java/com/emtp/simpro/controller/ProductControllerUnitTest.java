@@ -34,7 +34,7 @@ class ProductControllerUnitTest {
 
     @Test
     @DisplayName("Ok - getProductSimilar")
-    public void getProductSimilar() throws Exception {
+    void getProductSimilar() throws Exception {
         when(service.getSimilarProducts(any())).thenReturn(Set.of(MockUtil.PRODUCT_DETAIL_21, MockUtil.PRODUCT_DETAIL_22));
 
         ResponseEntity<Set<ProductDetail>> response = controller.getSimilarProducts("1");
@@ -47,7 +47,7 @@ class ProductControllerUnitTest {
 
     @Test
     @DisplayName("Exception - getProductSimilar")
-    public void getProductSimilar_ResponseStatusException() throws Exception {
+    void getProductSimilar_ResponseStatusException() throws Exception {
         when(service.getSimilarProducts("1234")).thenThrow(ResponseStatusException.class);
         assertThrows(ResponseStatusException.class, () -> {
             service.getSimilarProducts("1234");

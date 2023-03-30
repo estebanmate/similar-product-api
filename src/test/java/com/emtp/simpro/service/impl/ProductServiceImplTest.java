@@ -45,7 +45,7 @@ class ProductServiceImplTest {
 
     @Test
     @DisplayName("Exception - client.getProductSimilarIds")
-    public void getProductSimilar_ResponseStatusException() throws Exception {
+    void getProductSimilar_ResponseStatusException() throws Exception {
         when(client.getSimilarProductsIds("1234")).thenThrow(ResponseStatusException.class);
         assertThrows(ResponseStatusException.class, () -> {
             client.getSimilarProductsIds("1234");
@@ -56,7 +56,7 @@ class ProductServiceImplTest {
 
     @Test
     @DisplayName("Exception - client.getProductById")
-    public void getProductById_ResponseStatusException() throws Exception {
+    void getProductById_ResponseStatusException() throws Exception {
         when(client.getProductById("1234")).thenThrow(ResponseStatusException.class);
         assertThrows(ResponseStatusException.class, () -> {
             client.getProductById("1234");
