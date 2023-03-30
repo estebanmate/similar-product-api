@@ -1,0 +1,32 @@
+server:
+  port: ${port:5000}
+
+spring:
+  application:
+    name: SimilarProductsApi
+  cache:
+    type: caffeine
+    names: similarProductCache, productCache
+
+springdoc:
+  swagger-ui:
+    path: '/swagger-ui.html'
+
+springfox:
+  documentation:
+    swagger:
+      use-model-v3: false
+
+logging:
+  level:
+    root: ERROR
+    com.emtp.simpro: DEBUG
+    org.springframework.web: INFO
+    org.hibernate: ERROR
+
+api:
+  client:
+    product:
+      base-url: http://host.docker.internal:3001
+      getSimilarProductIds: /product/{productId}/similarids
+      getProductById: /product/{productId}

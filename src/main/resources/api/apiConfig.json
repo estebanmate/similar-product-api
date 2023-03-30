@@ -1,0 +1,9 @@
+{
+  "developerName": "Esteban Martín-Tembleque Poves",
+  "apiPackage": "com.emtp.simpro.api",
+  "modelPackage": "com.emtp.simpro.model",
+  "useBeanValidation": true,
+  "interfaceOnly": true,
+  "useOptional": true,
+  "library": "spring-boot"
+}
