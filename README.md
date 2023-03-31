@@ -11,6 +11,8 @@ Run **similar-products-api** image
 ```
 docker run --name container-similar-products-api --publish 5000:5000 similar-products-api
 ```
+For access the openapi:
+[http://localhost:5000/swagger-ui.html](http://localhost:5000/swagger-ui.html)
 
 ### Test and Mocks
 Download https://github.com/dalogax/backendDevTest
@@ -24,7 +26,7 @@ docker-compose up -d simulado influxdb grafana
 Check that mocks are working with a sample request to 
     [http://localhost:3001/product/1/similarids](http://localhost:3001/product/1/similarids)
 
-Check that similarproducts are working with a sample request to
+Check that similar-products-api are working with a sample request to
     [http://localhost:5000/product/1/similar](http://localhost:5000/product/1/similar)
     
 To execute the test run:
